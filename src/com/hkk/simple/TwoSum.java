@@ -23,7 +23,7 @@ public class TwoSum {
     public void quickSort(int[] nums, int start, int end) {
         if (start < end) {
             int i = partition(nums, start, end);
-            quickSort(nums, 0, i - 1);
+            quickSort(nums, start, i - 1);
             quickSort(nums, i + 1, end);
         }
     }
