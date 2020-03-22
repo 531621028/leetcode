@@ -1,4 +1,4 @@
-package com.hkk.simple;
+package com.hkk.middle;
 
 public class CanMeasureWater {
 
