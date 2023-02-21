@@ -19,6 +19,7 @@ public class MinTaps {
             final int left = jumps[i][0];
             final int right = jumps[i][1];
             for (int j = left + 1; j <= right; j++) {
+                // 由于该区间内的每个点都是可以到达的，即相当于在 dp[left] 的基础上又增加了一个喷头，所以可以用 dp[left] + 1来更新 dp[j]
                 dp[j] = Math.min(dp[j], dp[left] + 1);
             }
         }
