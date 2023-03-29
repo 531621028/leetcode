@@ -8,19 +8,10 @@ public class ShortestCommonSuperSequence {
 
     public String shortestCommonSuperSequence(String str1, String str2) {
 
-        if(str1.length() > str2.length()){
+        if (str1.length() > str2.length()) {
 
         }
-
-    }
-
-    public String shortestSuperSequence(String str1, String str2) {
-
-
-        if(str1.length() > str2.length()){
-
-        }
-
+        return str1;
     }
 
     public static void main(String[] args) {
