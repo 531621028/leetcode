@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class PrevPermOpt1 {
 
     public int[] prevPermOpt1(int[] arr) {
-        int[] minIndex = new int[10001];
+        int[] minIndex = new int[arr.length];
         minIndex[arr.length - 1] = arr[arr.length - 1];
         for (int i = arr.length - 2; i >= 0; i--) {
             minIndex[i] = Math.min(arr[i], minIndex[i + 1]);
