@@ -1,7 +1,5 @@
 package com.hkk.easy;
 
-import java.util.Arrays;
-
 /**
  * @author kang
  * @date 2023/4/17
@@ -14,13 +12,16 @@ public class CountDaysTogether {
         int leaveAliceIndex = index(monthDays, leaveAlice);
         int arriveBobIndex = index(monthDays, arriveBob);
         int leaveBobIndex = index(monthDays, leaveBob);
-        if (leaveAliceIndex < arriveBobIndex || leaveBobIndex < arriveAliceIndex) {
-            return 0;
-        } else {
-            final int[] sortIndex = {arriveAliceIndex, arriveBobIndex, leaveBobIndex, leaveAliceIndex};
-            Arrays.sort(sortIndex);
-            return sortIndex[2] - sortIndex[1] + 1;
-        }
+        final int maxArrive = Math.max(arriveAliceIndex, arriveBobIndex);
+        final int minLeave = Math.min(leaveAliceIndex, leaveBobIndex);
+        return Math.max(0, minLeave - maxArrive + 1);
+        // if (leaveAliceIndex < arriveBobIndex || leaveBobIndex < arriveAliceIndex) {
+        //     return 0;
+        // } else {
+        //     final int[] sortIndex = {arriveAliceIndex, arriveBobIndex, leaveBobIndex, leaveAliceIndex};
+        //     Arrays.sort(sortIndex);
+        //     return sortIndex[2] - sortIndex[1] + 1;
+        // }
 
     }
 
